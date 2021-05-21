@@ -1,0 +1,172 @@
+html, body
+  margin: 0
+  padding: 0
+  background-color: #ffffff
+  font-family: 'Montserrat', sans-serif
+  color: $base-text
+  &.open-popup
+    overflow: hidden
+
+.screen
+  overflow: hidden
+  position: relative
+  max-width: 100%
+
+.container
+  width: 100%
+  max-width: 1230px
+  margin: 0 auto
+  padding-left: 15px
+  padding-right: 15px
+  position: relative
+  section
+    position: relative
+
+h2
+  font-family: Lovelace
+  font-style: normal
+  font-weight: 500
+  font-size: 66px
+  line-height: 100%
+  color: #40BC80
+
+h3
+  font-family: Lovelace
+  font-style: normal
+  font-weight: 500
+  font-weight: 500
+  font-size: 41px
+  line-height: 1
+  color: #40BC80
+
+p
+  font-size: 16px
+  line-height: 24px
+
+strong
+  font-weight: 700
+  font-size: 16px
+  line-height: 24px
+
+.error
+  font-weight: 700
+  font-size: 16px
+  line-height: 24px
+  color: $orange
+  margin-bottom: 10px
+
+.text-green
+  font-size: 25px
+  line-height: 30px
+  color: $green
+
+.button-green
+  display: flex
+  align-items: center
+  justify-content: center
+  background-color: #40BC80
+  font-weight: 500
+  font-size: 16px
+  line-height: 150%
+  text-transform: uppercase
+  color: #FFFFFF
+  width: 100%
+  max-width: 300px
+  height: 60px
+  cursor: pointer
+  transition: $time linear
+  font-family: Montserrat
+  font-style: normal
+  &:hover
+    background-color: #3DCD88
+.button-orange
+  @mixin flex-center
+  font-family: Montserrat
+  font-style: normal
+  width: 300px
+  height: 60px
+  background: #40BC80
+  color: #ffffff
+  font-weight: 500
+  font-size: 18px
+  line-height: 1.5
+  text-transform: uppercase
+  transition: background $time
+  &:hover
+    cursor: pointer
+    background: #3DCD88
+  &.disabled, &.disabled:hover
+    background: #DFDFDF
+
+.text-box
+  background: #FFFFFF
+  box-shadow: 0px 0px 20px rgba(107, 107, 107, 0.25)
+  border-radius: 10px
+  padding: 40px 40px 50px
+
+.input-group
+  margin-bottom: 30px
+  label
+    display: block
+    font-size: 16px
+    line-height: 1
+    color: #373737
+    margin-bottom: 10px
+  input, textarea
+    display: block
+    width: 100%
+    max-width: 100%
+    height: 50px
+    border: 1px solid #C1C0C0
+    padding: 16px 20px
+    outline: 0
+    font-size: 16px
+    line-height: 18px
+    color: #000
+    font-family: 'Montserrat', sans-serif
+    .not-empty
+      border: 1px solid #888888
+    &::placeholder
+      color: #C1C0C0
+  textarea
+    resize: none
+
+@include breakpoint(medium)
+  .text-green
+    font-size: 16px
+    line-height: 1.2
+
+  .button-orange
+    width: 290px
+
+  h2
+    font-size: 42px
+
+  .text-box
+    padding: 20px 20px 30px
+
+  p, strong, .error
+    font-size: 14px
+    line-height: 1.5
+
+  h3
+    font-size: 16px
+
+  .input-group
+    margin-bottom: 20px
+
+@include breakpoint(small)
+  h2
+    font-size: 23px
+  .input-group
+    margin-bottom: 30px
+    label
+      color: $green
+@include breakpoint(mini)
+  .input-group
+    label
+      font-size: 14px
+    input
+      height: 40px
+      padding: 11px 16px
+      font-size: 14px

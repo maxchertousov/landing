@@ -1,0 +1,16 @@
+image: mhart/alpine-node:12.16.2
+
+stages:
+  - .pre
+  - build
+  - deploy
+
+include:
+  - project: 'tech/ci_scripts/defaults'
+    ref: master
+    file: '/start_runner.yml'
+  
+include:
+  - project: 'tech/ci_scripts/defaults'
+    ref: master
+    file: '/landing_build.yml'

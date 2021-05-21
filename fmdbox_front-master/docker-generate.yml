@@ -1,0 +1,13 @@
+version: '2.1'
+services:
+  landing:
+    build: ./
+    volumes:
+      - ./:/var/www
+    entrypoint: /bin/bash
+    command: /var/www/start-gen.sh
+    environment:
+      - BASE_URL
+      - BROWSER_URL
+    ports:
+      - 3000:3000
